@@ -1,0 +1,561 @@
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* HEADER */
+  
+.header {
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 2;
+    height: 44px;
+}
+.header a {
+    color: #FFF;
+}
+
+  .header img{
+      height: 24px;
+      width: 24px;
+      padding-bottom: 10px;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #0000EC;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+
+  .header .logo {
+    display: block;
+    float: left;
+    margin: 10px 0 10px 16px;
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 21px 19px 21px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .nav-icon:before,
+  .header .menu-icon .nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+  
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+
+/*INTRO*/
+.intro .container{
+    width:calc(100% - 32px);
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-top: 73px;
+    padding-bottom: 24px;
+
+}
+
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h1 del{
+  font-weight: 500;
+
+}
+.intro p{
+    font-size: 14px;
+    padding: 16px 0 36px 0;}
+
+.btn-intro{
+    width: 100%;
+    height: 48px;
+    border: 0;
+    background-color: #00F3BB;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+   transition: all .2s ease-in-out;
+    max-width: 288px;
+  }
+
+  button:hover{
+    background: linear-gradient(to right, #00F0B8, #0000FE );
+    color: white;
+  }
+
+  /*EPISODIOS*/
+
+  .episodios{
+    background: linear-gradient(#0000FF , #0000A3);    
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+    padding-bottom: 130px;
+  }
+  iframe{
+    border: none;
+    width: 100%;
+  }
+
+  .episodios .container{
+    width: calc(100% - 22px);
+    margin: auto;
+    max-width: 700px;
+  }
+  
+  .episodios h2{
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    padding: 64px 0 21px 16px;
+    display: block;
+  }
+
+   /*NOSOTROS*/
+   .nosotros{
+    max-width: 700px;
+    margin: 0 auto;
+   }
+
+   .nosotros img{
+    width: 100%;
+    position: relative;
+    margin-top: -103px;
+   }
+
+   .nosotros .container{
+     width: calc(100% - 32px);
+     margin: auto;
+     position: relative;
+     max-width: 480px;
+   }
+
+   .nosotros h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 42px;
+    padding-bottom: 8px;
+    margin-top: 27px;
+    font-weight: 500;
+
+  }
+  .nosotros p{
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+
+  /*INVITADOS*/
+  .invitados{
+    margin-top: 54px;
+
+  }
+
+  .invitados h2{
+    width: 90%;
+    height: auto;
+    font-family: 'IBMPlexSans', sans-serif;
+    font-size: 36px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 42px;
+    margin: 0 16px 14px 16px;
+    font-weight: 400;
+  }
+  
+  .invitados img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block
+  }
+  
+  /*TOPICOS*/
+  .topicos{
+    margin: 48px 16px 42px 16px;
+  }
+
+  .topicos h2{
+    padding-bottom: 37px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    color: #060A24;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 42px
+  }
+
+  .topicos ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+  }
+  .topicos li{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 36px;
+  }
+
+  .topicos li img{
+    padding-bottom: 13px;
+  
+  }
+  .topicos li p{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+  }
+/*NOVEDADES*/
+.novedades{
+  background: linear-gradient(to right,#0000FF , #0000A3); 
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+   
+
+}
+
+.novedades .container{
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  max-width: 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.novedades h2{
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 42px;
+  font-weight: 400;
+  padding: 64px 0 36px 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.novedades button{
+  margin-bottom: 67px;
+
+}
+
+/*FOOTER*/
+
+.footer .container{
+  margin: 24px 46px 31px 47px;
+  
+}
+
+.footer .copyright{
+  padding-bottom: 16px;
+
+}
+
+.footer h6{
+  font-size: 14px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 22px;
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: center;
+}
+
+.footer .enlaces{
+  display: flex;
+  justify-content: center;
+}
+
+.enlaces a{
+  padding-left: 38px;
+  color: black;
+}
+
+.enlaces a:first-child{
+  padding-left: 0;
+}
+
+/*BREAK-POINT*/
+
+@media (min-width:1024px){
+  /*NAVBAR*/
+  .header .container{
+    display: flex;
+    margin: 0 auto;
+    width: calc(100% - 200px);
+    justify-content: space-between;
+  }
+  .header{
+    height: 80px;
+    position: absolute;
+  }
+
+  .menu-icon{
+    display:none;
+  }
+  .header ul{
+    display: flex;
+    overflow: visible;
+  }
+  .header li{
+    /*float: left;*/
+    background-color: white;
+  }
+  .header li a{
+    color: black;
+    padding: 26px 0 26px 48px;
+    border: 0;
+  }
+  .header .menu{
+    clear: none;
+  
+    /*float: right;*/
+  }
+  .header .menu-icon{
+    display: none;
+  }
+  .header .logo{
+    margin: 22px 0;
+  }
+  .header img{
+    height: 36px;
+    width: auto;
+    padding: 0;
+  }
+
+  .header li a:hover,
+  .header .menu-btn:hover {
+    text-decoration: line-through;
+    color: #00F3BB;
+    cursor: pointer;
+  }
+  .header li a:active{
+      text-decoration: line-through;
+      color: #8F060A24;
+  }
+  /*INTRO*/
+  .intro .container{
+    width: calc(100% - 400px);
+    margin: 0 auto;
+    padding-top: 200px;
+  }
+  .intro br{
+    display: none;
+  }
+  .intro h1{
+    font-size: 64px;
+    color: #060A24;
+    letter-spacing: 0;
+  }
+  .intro .dot{
+    color: #0000EC;
+  }
+  .intro p{
+    font-size: 16px;
+    max-width: 628px;
+  }
+
+  /*EPISODIOS*/
+  .episodios{
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+    padding-bottom: 110px;
+    padding-top: 100px;
+    background: linear-gradient(to left,#0000FF , #0000A3);
+
+  }
+  .episodios .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  .episodios iframe{
+    width: 47%;
+    height: 232px;
+    margin-bottom: 72px;
+  }
+  .episodios h2{
+    font-size: 48px;
+    padding: 86px 0 26px 200px;
+  }
+
+
+  /*NOSOTROS*/
+  .nosotros{
+    width: calc(100% - 27.8%);
+    
+    max-width: 900px;
+  }
+
+  .nosotros .container{
+    width: 36%;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    margin-left: 62px;
+    margin-top: -24px;
+    min-width: 369px;
+  }
+  .nosotros h2{
+    font-size: 48px;
+    color: #060A24;
+    letter-spacing: 0;
+    padding-bottom: 24px;
+  }
+  .nosotros p{
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 24px;
+    max-width: 400px;
+  }
+
+  .nosotros img{
+    width: 50%;
+  }
+
+  /*INVITADOS*/
+
+  .invitados{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .invitados img{
+    width: 33%;
+  }
+  /*NOVEDADES*/
+
+.novedades{
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.novedades h2{
+  padding-top:213px;
+}
+.novedades .container{
+  max-width: none;;
+
+}
+
+
+/*TOPICOS*/
+
+.topicos{
+  width: calc(100% - 27.8%);
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.topicos h2{
+  padding-bottom: 56px;
+}
+.topicos ul{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topicos p{
+  max-width: 220px;
+}
+
+.topicos ul img{
+  padding-bottom: 29px;
+}
+/*FOOTER*/
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+  margin: 36px 100px 31px 100px;
+}
+
+ .footer .enlaces a{
+   padding-left: 36px;
+ }
+}
+
